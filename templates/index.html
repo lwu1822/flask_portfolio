@@ -3,21 +3,75 @@
 
 {% block body %}
     <!-- Start of body content specific to page -->
+    <style>
+        h1 span { 
+            background-image: linear-gradient(60deg, #E21143, #FFB03A); 
+            color: white;
+        }
+
+    </style>
     <div class="px-5 py-5 mx-auto">
-        <h1 class="text-white"><strong>Lily's Python Home Page</strong></h1>
+        <h1><center><span><strong>Lily's Python Home Page</strong></span></center></h1>
+
+                <br>
+        <div class="col-15">
+                <center>
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Hi! I'm Lily</h5>
+                        <p class="card-text">
+                                <p>Checkout my blog <a href="https://lwu1822.github.io/fastpages/">here!</a></p>
+                        </p>
+                        </div>
+                    </div>
+                </center>
+
+                <br> 
+            
+                <br>
+        </div>
+
         <div class="row">
-            <div class="col-10">
+            <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                    <h5 class="card-title">Hi! I'm Lily</h5>
+                    <h5 class="card-title">lol who is Lily?</h5>
                     <p class="card-text">
-                            <p>Checkout my blog <a href="https://lwu1822.github.io/fastpages/">here!</a></p>
+                        <p>Lily is a human being who is currently a junior at Del Norte High School</p>
+                        <p>Lily loves programming, exploring code, and reading</p>
                     </p>
+                    <a href="aboutMe" class="btn btn-primary">Check out Lily's About Me to learn a little bit more</a>
                     </div>
                 </div>
             </div>
-            
-            
+
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">BOOKS! BOOKS! BOOKS!</h5>
+                    <p class="card-text">
+                        <img src="{{ url_for('static', filename='assets/saltToTheSea.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+                        <img src="{{ url_for('static', filename='assets/sherlockHolmes.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+                        <img src="{{ url_for('static', filename='assets/legend.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+                        <img src="{{ url_for('static', filename='assets/hungerGames.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+                        <img src="{{ url_for('static', filename='assets/lordOfTheRings.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+                    </p>
+                    <a href="books" class="btn btn-primary">As you can see, Lily loves reading :3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                    <h5 class="card-title">Math</h5>
+                    <p class="card-text">
+                        <img src="{{ url_for('static', filename='assets/math.jpg') }}" alt="Salt to the Sea" width="400" height="266">
+                    </p>
+                    <a href="math" class="btn btn-primary">Wanna find out the most beautiful equation in math?</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

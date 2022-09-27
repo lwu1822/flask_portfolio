@@ -1,0 +1,31 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<style>
+    h1 span { 
+        background-image: linear-gradient(60deg, #E21143, #FFB03A); 
+        color: white;
+    }
+</style>
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <div class="px-5 py-5 mx-auto">
+        <h1><span><strong>About Me</strong></span></h1>
+        <p class="text-secondary">My name is Lily Wu. I’m a junior at Del Norte High School.</p>
+        <p class="text-secondary">My interests are in STEM, including programming, cybersecurity, and math.</p>            
+        <p class="text-secondary">I’m passionate about learning, and I love to play around and explore code.</p>         
+        <p class="text-secondary">I don’t know if this is a good thing, but I have a bad habit of falling down a rabbit hole as I look up what each code syntax does specifically.</p>
+
+        <h1><span><strong>Interests</strong></span></h1>
+        <p class="text-secondary">I like to code, although I'm still pretty new to it. Programming languages I'm currently learning are Java, Python, HTML, CSS, and JavaScript. I have also learned C++ in the past</p>
+        <p class="text-secondary">Apart from coding, I also enjoy math and physics</p>
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

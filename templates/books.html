@@ -1,0 +1,52 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<style>
+    h1 span { 
+        background-image: linear-gradient(60deg, #E21143, #FFB03A); 
+        color: white;
+    }
+</style>
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <div class="px-5 py-5 mx-auto">
+        <h1><span><strong>Books</strong></span></h1>
+        <p>It's probably obvious by now, but I love reading :)</p>
+        <p>The books that I had on my homepage are some of my favorite books, but I have a lot more</p>
+        <p>I'll give an introduction to each one</p>
+
+        <ol>
+            <li><strong>Salt to the Sea</strong></li>
+        
+        <img src="{{ url_for('static', filename='assets/saltToTheSea.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+        <p>Genre: Historical fiction</p>
+        <p>Set in World War II, four teenagers must overcome numerous obstacles as they struggle to flee wartorn Europe. I absolutely loved this novel because of how much action it contained, as well as some very touching scenes. The story was very sad, but the characters' determination and hope for a brighter future made the book both bitersweet and heartwarming at the same time.</p>
+        
+            <li><strong>Sherlock Holmes</strong></li>
+        
+        <img src="{{ url_for('static', filename='assets/sherlockHolmes.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+        <p>Genre: Mystery</p>
+        <p>Haha, the classic mystery novel. Loved all of the short, as well as the full stories in which the perceptive Sherlock Holems would be able to solve any mystery he encountered while others marveled at his uncany knack for observation.</p>
+        <li><strong>Legend</strong></li>
+        <img src="{{ url_for('static', filename='assets/legend.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+        <p>Genre: Dystopian</p>
+        <p>In the near future, America has split into two nations who are constantly fighting each other. Fifteen year old June is a prodigy, trained to serve the Republic of America, while fifteen year old Day is a criminal, living on the streets of Los Angeles. A series of unexpected events results in June's brother dead, and Day is on the run, with June after him, desperate for revenge.</p>
+        <li><strong>The Hunger Games</strong></li>
+        <img src="{{ url_for('static', filename='assets/hungerGames.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+        <p>Genre: Dystopian</p>
+        <p>Every year, the Capitol of Panem holds an event known as the Hunger Games, in which 12 districts are forced to provide a boy and a girl to compete in a fight to the death. Katniss, a sixteen year old living in District 12, must rely on her skills and wit to be able to survive the bloody battle.</p>
+        <li><strong>Lord of the Rings</strong></li>
+        <img src="{{ url_for('static', filename='assets/lordOfTheRings.jpg') }}" alt="Salt to the Sea" width="100" height="151">
+        <p>Genre: Fantasy</p>
+        <p>Unfourtantely, I read this book so long ago that I can't provide an interesting synopsis. I do remember, however, that if you like classics, elves, hobbits, and many more, then this is the perfect book for you.</p>
+        </ol>
+    </div>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

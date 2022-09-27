@@ -1,0 +1,38 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+<style>
+    h1 span { 
+        background-image: linear-gradient(60deg, #E21143, #FFB03A); 
+        color: white;
+    }
+</style>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+    <!- Try building a new body here, bootstrap is a wise choice ->
+
+    <h1><strong><span>Math</span></strong></h1>
+
+    <p>Not the biggest enjoyer of math in the classroom, <strong>but I believe that math can be so much fun when you can take your time to learn it on your own and actually be able to explore the beauty of math :)</strong></p>
+    <p>Did you know that you can use MathJax in HTML?</p>
+    <p>Ready?</p>
+    <details>
+        <summary>Woah</summary>
+        <p>$e^{i\pi} + 1 = 0$</p>
+    </details>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

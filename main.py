@@ -17,9 +17,17 @@ def page_not_found(e):
 def index():
     return render_template("index.html")
 
-@app.route('/stub/')  # connects /stub/ URL to stub() function
-def stub():
-    return render_template("stub.html")
+@app.route('/aboutMe/')  # connects /stub/ URL to stub() function
+def aboutMe():
+    return render_template("aboutMe.html")
+
+@app.route('/books/')  # connects /stub/ URL to stub() function
+def books():
+    return render_template("books.html")
+
+@app.route('/math/')  # connects /stub/ URL to stub() function
+def math():
+    return render_template("math.html")
 
 # this runs the application on the development server
 if __name__ == "__main__":
